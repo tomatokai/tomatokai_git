@@ -7,6 +7,7 @@ import pymongo
 
 #用來獲取文件名
 class easyGet():
+	#參數為：文件夾路經，文件格式
 	def get_file_name(file_path,file_format,word_bin,word_end):
 		L = []
 		for root,dirs,files in os.walk(file_path):
