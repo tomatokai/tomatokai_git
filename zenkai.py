@@ -18,3 +18,12 @@ class easyGet():
 			i = i[word_bin:word_end]
 			list_new.append(i)
 		return list_new
+
+#用於把數據存入mongodb
+class easyLink():
+	#用於檢查pymongo是否已經連上mongodb
+	def mongotest(host_t,port_t,db_n_t,db_collection_t):
+		client = pymongo.MongoClient(host_t,port_t)
+		db = client[db_n_t]
+		db_col = db[db_collection_t]
+		return db_col.find_one()	
