@@ -27,3 +27,13 @@ class easyLink():
 		db = client[db_n_t]
 		db_col = db[db_collection_t]
 		return db_col.find_one()	
+
+	#字典存入mongodb中
+	def dictToMongo_all(host,port,db_n,db_collection,dict_data):
+		client = pymongo.MongoClient(host,port)
+		db = client[db_n]
+		db_col = db[db_collection]
+		data = dict_data
+		for j in data:
+			db_col.insert_one(j)
+		print('导入数据',db_col)
