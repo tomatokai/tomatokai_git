@@ -37,3 +37,10 @@ class easyLink():
 		for j in data:
 			db_col.insert_one(j)
 		print('导入数据',db_col)
+
+class easyFile():
+	#移动文件
+	def move_file(f_from,f_to)
+		for i in f_from:
+			shutil.move(i,f_to)
+			print(i,'移动到',f_to)
