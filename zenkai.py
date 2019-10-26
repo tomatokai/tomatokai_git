@@ -26,7 +26,7 @@ class easyLink():
 		client = pymongo.MongoClient(host_t,port_t)
 		db = client[db_n_t]
 		db_col = db[db_collection_t]
-		return db_col.find_one()	
+		return db_col.find_one()
 
 	#字典存入mongodb中
 	def dictToMongo_all(host,port,db_n,db_collection,dict_data):
